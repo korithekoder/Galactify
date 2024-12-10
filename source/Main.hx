@@ -1,5 +1,8 @@
 package;
 
+#if !js
+import discord_rpc.DiscordRpc;
+#end
 import flixel.FlxState;
 import flixel.FlxGame;
 import openfl.display.Sprite;
@@ -48,6 +51,16 @@ class Main extends Sprite {
 	 */
 	public function new() {
 		super();
+
+		#if !js
+		DiscordRpc.initalize(1234567890);
+		#end
+
+		#if !debug
+		trace("Debugging mode isn't enabled!");
+		#else
+		trace("Debugging mode is enabled!");
+		#end
 
 		// Add the game object
 		addChild(new FlxGame(

@@ -35,6 +35,22 @@ class GlcSprite extends FlxSprite {
     }
 
     /**
+     * Get the centered X of `this` GlcSprite.
+     * @return Float
+     */
+    public function getCenterX():Float {
+        return this.getX() + this.width / 2;
+    }
+
+    /**
+     * Get the centered Y of `this` GlcSprite.
+     * @return Float
+     */
+    public function getCenterY():Float {
+        return this.getY() + this.height / 2;
+    }
+
+    /**
      * Set the "y" position of the sprite.
      * @param i Position to be set.
      */

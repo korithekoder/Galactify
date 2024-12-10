@@ -16,6 +16,7 @@ class InitState extends FlxState {
         // Setup the system config stuff
         GlcConfig.setupBaseSys();
 
+        // Switch to the PlayState
         FlxG.switchState(new PlayState());
     }
 }

@@ -13,8 +13,11 @@ class GlcText extends FlxText {
      * Constructor.
      * @param x X position to be set for the new GlcSprite. Default value is `0`.
      * @param y Y position to be set for the new GlcSprite. Default value is `0`.
+     * @param text The text to be displayed. Default value is an empty string.
+     * @param size The size of the text. Default value is `8`.
+     * @param font The font of the text. Default value is the built in Galactify font.
      */
-    public function new(x:Float = 0, y:Float = 0, text:String = "", size:Int = 8, font:String = "") {
+    public function new(x:Float = 0, y:Float = 0, text:String = "", size:Int = 8, font:String = "assets/fonts/Retro Gaming.ttf") {
         super(GlcGraph.x(x), GlcGraph.y(y), text, size);
         this.font = font;
     }
